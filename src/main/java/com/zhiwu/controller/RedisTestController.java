@@ -1,5 +1,6 @@
 package com.zhiwu.controller;
 
+import com.zhiwu.aop.TestAop;
 import com.zhiwu.service.IRedisTestService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,6 +18,9 @@ public class RedisTestController {
 
     @Resource(name = "redisTestService")
     private IRedisTestService redisTestService;
+
+    @Resource(name = "testAop")
+    private TestAop testAop;
 
     /**
      * 测试添加缓存数据

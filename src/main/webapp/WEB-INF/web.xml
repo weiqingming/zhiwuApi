@@ -30,7 +30,8 @@
       <param-value>
         classpath:mvc-dispatcher-servlet.xml,
         classpath:mybatis-spring.xml,
-        classpath:redis-spring.xml
+        classpath:redis-spring.xml,
+        classpath:aop-spring.xml
       </param-value>
     </init-param>
 

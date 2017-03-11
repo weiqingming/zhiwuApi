@@ -7,8 +7,8 @@ import com.zhiwu.utils.MainUtils;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.util.ArrayList;
-import java.util.List;
+import java.lang.reflect.Array;
+import java.util.*;
 
 /**
  * Created by weiqingming on 2017/2/27.
@@ -54,6 +54,9 @@ public class RedisTestImpl implements IRedisTestService {
     @Override
     public void getData() {
 
+        List<String> lista = new ArrayList<String>();
+
+
         if (redisCache != null) {
 
             //读取添加的字符串
@@ -68,7 +71,7 @@ public class RedisTestImpl implements IRedisTestService {
             //读取带定义缓存时间的字符串
             String strb = redisCache.getCache("stringb");
 
-            System.out.println("ok");
+            System.out.println("");
         }
     }
 

@@ -20,4 +20,7 @@ public class ResultState
 
     /* 数量已达上限 */
     public final static int LIMIT = 204;
+
+    /* 验签失败 */
+    public final static int VERSIGN = 205;
 }

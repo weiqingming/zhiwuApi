@@ -74,7 +74,7 @@ public class VerSignsImpl {
     /**
      * 验证签名
      */
-    private <T> boolean verSigns(T data) {
+    public <T> boolean verSigns(T data) {
 
         boolean vb = false;
 

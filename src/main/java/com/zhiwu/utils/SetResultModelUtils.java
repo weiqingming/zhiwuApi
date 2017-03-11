@@ -1,5 +1,6 @@
 package com.zhiwu.utils;
 
+import com.zhiwu.global.ResultState;
 import com.zhiwu.model.BaseResultModel;
 
 /**
@@ -38,24 +39,28 @@ public class SetResultModelUtils
         result.setState(state);
         switch (state)
         {
-            case 200:
+            case ResultState.SUCCESS:
                 msg = "请求成功";
                 break;
 
-            case 201:
+            case ResultState.FAILURE:
                 msg = "请求失败";
                 break;
 
-            case 202:
+            case ResultState.NULLDATA:
                 msg = "没有数据";
                 break;
 
-            case 203:
+            case ResultState.NOLOGIN:
                 msg = "用户未登录";
                 break;
 
-            case 204:
+            case ResultState.LIMIT:
                 msg = "数量已达上限";
+                break;
+
+            case ResultState.VERSIGN:
+                msg = "验签失败";
                 break;
 
             default:

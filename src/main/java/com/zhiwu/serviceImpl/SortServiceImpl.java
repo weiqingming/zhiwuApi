@@ -11,6 +11,7 @@ import com.zhiwu.utils.MainUtils;
 import com.zhiwu.utils.ResultSetUtils;
 import com.zhiwu.utils.SetResultModelUtils;
 import org.apache.ibatis.session.SqlSession;
+import org.springframework.stereotype.Service;
 
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -21,6 +22,7 @@ import java.util.Map;
  * Created by 韦庆明 on 2016/12/5.
  * 一级分类逻辑层操作接口实现类
  */
+@Service("sortServiceImpl")
 public class SortServiceImpl extends BaseServiceImpl implements ISortService {
 
 

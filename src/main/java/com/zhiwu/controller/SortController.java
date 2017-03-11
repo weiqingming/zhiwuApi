@@ -1,9 +1,12 @@
 package com.zhiwu.controller;
 
 
+import com.zhiwu.service.ISortService;
 import com.zhiwu.serviceImpl.VerSignsImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+
+import javax.annotation.Resource;
 
 /**
  * Created by 韦庆明 on 2016/11/30.
@@ -26,6 +29,9 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class SortController extends BaseInitService{
 
+    @Resource(name = "sortServiceImpl")
+    private ISortService sortService;
+
     /**
      * 获取一级分类数据
      * */
@@ -34,7 +40,7 @@ public class SortController extends BaseInitService{
             produces = "application/json; encoding=UTF-8;charset=UTF-8")
     @ResponseBody
     public Object querySort(@RequestParam("data") String data) {
-        return VerSignsImpl.getVerSigns().serviceEntryway(iSortServer(),"select",data);
+        return sortService.select(data);
     }
 
 

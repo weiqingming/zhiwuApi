@@ -4,7 +4,7 @@ package com.zhiwu.model;
  * Created by 韦庆明 on 2016/12/1.
  * 固定的返回数据模板，请求返回统一按此模板返回数据
  */
-public class BaseResultModel<T>
+public class BaseResultModel<T> extends BaseModel
 {
     //返回状态码，参照ResultState类
     private int state;
